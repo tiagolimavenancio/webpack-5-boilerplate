@@ -1,21 +1,18 @@
-import favicon from "./images/favicon.png";
-import logo from "./images/webpack-logo.svg";
+// Test import of a JavaScript function
+import { example } from "./js/example";
 
-import "./styles/main.scss";
+// Test import of an asset
+import webpackLogo from "./images/webpack-logo.svg";
 
-// Create a class property without a constructor
-class Game {
-  name = "Violin Charades";
-}
-const myGame = new Game();
-// Create paragraph node
-const p = document.createElement("p");
-p.textContent = `I like ${myGame.name}.`;
+// Test import of styles
+import "./styles/index.scss";
 
-// Create heading node
+// Appending to the DOM
+const logo = document.createElement("img");
+logo.src = webpackLogo;
+
 const heading = document.createElement("h1");
-heading.textContent = "Interesting!";
+heading.textContent = example();
 
-// Append SVG and heading nodes to the DOM
 const app = document.querySelector("#root");
-app.append(heading, p);
+app.append(logo, heading);
