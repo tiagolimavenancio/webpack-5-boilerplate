@@ -1,3 +1,6 @@
+import favicon from "./images/favicon.png";
+import logo from "./images/webpack-logo.svg";
+
 // Create a class property without a constructor
 class Game {
   name = "Violin Charades";
